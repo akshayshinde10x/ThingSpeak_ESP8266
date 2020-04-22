@@ -12,10 +12,10 @@ DHT dht(DHTPIN, DHTTYPE);
 WiFiMulti WiFiMulti;
 
 const char* ssid     = "Amplifiers"; // Your SSID (Name of your WiFi)
-const char* password = "123456789"; //Your Wifi password
+const char* password = "Ak*****"; //Your Wifi password
 
 const char* host = "api.thingspeak.com";
-String api_key = "F3UDSISR6OQDT5L7"; // Your API Key provied by thingspeak
+String api_key = "F3UD*********T5L7"; // Your API Key provied by thingspeak
 
 void setup(){
   Serial.begin(9600);
@@ -39,7 +39,7 @@ void loop(){
   Serial.print(h);
   Serial.print(F("%  Temperature: "));
   Serial.print(t);
-  Serial.print(F("°C "));
+  Serial.println(F("°C "));
 
   
  // call function to send data to Thingspeak
@@ -76,7 +76,7 @@ void Send_Data(float t, float h)
 {
 
   // map the moist to 0 and 100% for a nice overview in thingspeak.
-  
+  Serial.println("");
   Serial.println("Prepare to send data");
 
   // Use WiFiClient class to create TCP connections
